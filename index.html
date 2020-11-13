@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>じゃじゃん拳</title>
+  <link rel="shortcut icon" href="./img/jajan.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<body>
+  <!-- この中に記述していく -->
+  <div class="wrap">
+    <div class="back">
+      <a href="./top.html"></a>
+    </div>
+    
+    <div class="center">
+      <h1>負けがちジャンケン</h1>
+      <div>
+        <p class="time">【制限時間】</p>
+        <progress id="myProgress" value="0" max="100">0%</progress>
+      </div>
+      <!-- Start＆Stop -->
+      <div class="start_stop"> 
+        <div id="firstbutton">
+          <p>1回目</p>
+          <input type="button" value="Start＆Stop" id="button1" >
+        </div>
+        <div id="secondbutton" class="hide">
+          <p >2回目</p>
+          <input type="button" value="Start＆Stop" id="button2">
+        </div>
+        <div id="thirdbutton" class="hide">
+          <p>3回目</p>
+          <input type="button" value="Start＆Stop" id="button3">
+        </div>
+        <div id="PassageArea">
+          <p>※各回での経過時間※</p>
+         </div>
+      </div>
+
+    <!-- enemy画像 -->
+    <div>
+      <img class="indeximg" src="./img/enemy.png" alt="">
+    </div>
+
+    <!-- 相手の手 -->
+    <div>
+      <img class="randomHand randomgu" src="./img/gu.png" alt="">
+      <img class="randomHand randomcho hide" src="./img/cho.png" alt="">
+      <img class="randomHand randompa hide" src="./img/pa.png" alt="">
+    </div>
+    <!-- 自分の手 -->
+    <div class="hand">
+      <img class="gu_btn timer_stopbutton" id="" src="./img/gu.png" alt="">
+      <img class="cho_btn timer_stopbutton" id="" src="./img/cho.png" alt="">
+      <img class="par_btn timer_stopbutton" id="" src="./img/pa.png" alt="">
+    </div>
+      <!-- pika画像 -->
+    <div>
+      <img class="indeximg2" src="./img/pika.png" alt="">
+    </div>
+
+    <!-- 結果ボタン -->
+    <div>
+      <input class="resultPage hide" type="button" value="結果画面へ" id="" >
+    </div>
+   </div>
+
+  <!-- 結果画面 -->
+  <div id="overlay">
+    <div id="overlayWindow">
+      <h3 class="margin">【結果】</h3>
+      <p class="resultMessage">勝利回数</p>
+      <p class="resultMessage2">平均回答スピード</p>
+      <div>
+        <h3 class="margin">【勝敗】</h3>
+        <div class="pc">
+          <div class="pc1 margin"></div>
+          <div class="pc2 margin"></div>
+          <div class="pc3 margin"></div>
+      </div>
+      </div>
+      <button class="replay" >戻る</button>
+    </div>
+  </div>
+</div>
+
+  <!-- ゲームオーバー画面 -->
+  <div class="gameover hide">
+    <h2>GAMEOVER</h2>
+    <button class="replay">もう一度</button>
+    <div class="enemyimg">
+      <img id="enemy" src="./img/enemy.png" alt="">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="js/test.js"></script>
+</body>
+
+</html>
